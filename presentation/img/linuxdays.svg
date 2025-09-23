@@ -4,10 +4,11 @@
 <svg
    version="1.1"
    id="svg1"
-   width="569.50311"
-   height="543.87543"
-   viewBox="0 0 569.50312 543.87542"
-   sodipodi:docname="Linux_Days_RGB_pozitiv.pdf"
+   width="514.8974"
+   height="455.33997"
+   viewBox="0 0 514.89741 455.33996"
+   sodipodi:docname="linuxdays.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -103,12 +104,21 @@
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1" />
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1923663"
+     inkscape:cx="259.56788"
+     inkscape:cy="228.11781"
+     inkscape:window-width="1212"
+     inkscape:window-height="1153"
+     inkscape:window-x="10"
+     inkscape:window-y="10"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g21" />
   <g
      id="layer-MC0"
      inkscape:groupmode="layer"
      inkscape:label="Vrstva 1"
-     transform="translate(-104.71225,-95.2872)">
+     transform="translate(-130.14727,-138.99657)">
     <g
        id="g21"
        inkscape:export-filename="stopa.png"
@@ -177,13 +187,6 @@
            transform="matrix(1.3333333,0,0,-1.3333333,422.58747,594.33653)"
            clip-path="url(#clipPath20)" />
       </g>
-      <rect
-         style="fill:none;fill-opacity:1"
-         id="rect20"
-         width="569.50311"
-         height="543.87543"
-         x="104.71224"
-         y="95.287201" />
     </g>
   </g>
 </svg>
