@@ -83,7 +83,7 @@
 
         <!-- Explaining the basics -->
         <section>
-          <section data-background-color="#faaf3b">
+          <section>
             <h2>The Basics</h2>
             <p>What is Binary Coverage all about?</p>
           </section>
@@ -106,6 +106,36 @@
           <section data-transition="fade">
               <img src="img/program-illustration/step-3.svg" style="height:100%">
           </section>
+        </section>
+
+        <!-- Example test suite -->
+        <section>
+          <section data-background-color="#faaf3b">
+            <h2>Example Test Suite</h2>
+            <p>Testing an example binary program</p>
+          </section>
+          <section data-auto-animate data-background-color="#faaf3b">
+            <pre data-id="code-example-0"><code class="language-bash" data-line-numbers="1-5|4">
+$ ./stringutils 
+Usage: ./stringutils &lt;operation&gt; &lt;string&gt; [shift]
+Operations: reverse, palindrome, vowels, uppercase, caesar
+
+            </code></pre>
+          </section>
+          <section data-auto-animate data-background-color="#faaf3b">
+            <pre data-id="code-example-0"><code class="language-bash" data-line-numbers>
+$ ./stringutils 
+Usage: ./stringutils &lt;operation&gt; &lt;string&gt; [shift]
+Operations: reverse, palindrome, vowels, uppercase, caesar
+
+            </code></pre>
+            <pre><code class="language-bash" data-line-numbers>
+$ ./stringutils uppercase HelLo
+HELLO
+
+            </code></pre>
+          </section>
+          <!-- Add Test Suite Here -->
         </section>
 
       </div>
