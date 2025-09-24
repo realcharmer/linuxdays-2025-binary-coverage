@@ -83,61 +83,136 @@
 
         <!-- Explaining the basics -->
         <section>
-          <section>
+          <section data-background-color="#efefef">
             <h2>The Basics</h2>
             <p>What is Binary Coverage all about?</p>
           </section>
-          <section data-auto-animate>
+          <section data-auto-animate data-background-color="#efefef">
             <p>Measuring <strong>Code Coverage</strong> of automated tests</p>
           </section>
-          <section data-auto-animate>
+          <section data-auto-animate data-background-color="#efefef">
             <p>Measuring <strong>Code Coverage</strong> of automated tests</p>
             <p><small>How much code you are actually testing</small></p>
           </section>
-          <section data-transition="slide-in fade-out">
+          <section data-transition="slide-in fade-out" data-background-color="#efefef">
               <img src="img/program-illustration/step-0.svg" style="height:100%">
           </section>
-          <section data-transition="fade">
+          <section data-transition="fade" data-background-color="#efefef">
               <img src="img/program-illustration/step-1.svg" style="height:100%">
           </section>
-          <section data-transition="fade">
+          <section data-transition="fade" data-background-color="#efefef">
               <img src="img/program-illustration/step-2.svg" style="height:100%">
           </section>
-          <section data-transition="fade">
+          <section data-transition="fade" data-background-color="#efefef">
               <img src="img/program-illustration/step-3.svg" style="height:100%">
           </section>
         </section>
 
         <!-- Example test suite -->
         <section>
-          <section data-background-color="#faaf3b">
+          <section data-background-color="#525252">
             <h2>Example Test Suite</h2>
             <p>Testing an example binary program</p>
           </section>
-          <section data-auto-animate data-background-color="#faaf3b">
-            <pre data-id="code-example-0"><code class="language-bash" data-line-numbers="1-5|4">
-$ ./stringutils 
-Usage: ./stringutils &lt;operation&gt; &lt;string&gt; [shift]
-Operations: reverse, palindrome, vowels, uppercase, caesar
-
+          <section data-auto-animate data-background-color="#525252">
+            <pre><code class="language-bash" data-line-numbers data-trim>
+              $ ./stringutils
+              Usage: ./stringutils &lt;operation&gt; &lt;string&gt; [shift]
+              Operations: reverse, palindrome, vowels, uppercase, caesar
             </code></pre>
           </section>
-          <section data-auto-animate data-background-color="#faaf3b">
-            <pre data-id="code-example-0"><code class="language-bash" data-line-numbers>
-$ ./stringutils 
-Usage: ./stringutils &lt;operation&gt; &lt;string&gt; [shift]
-Operations: reverse, palindrome, vowels, uppercase, caesar
-
+          <section data-auto-animate data-background-color="#525252">
+            <pre><code class="language-bash" data-line-numbers data-trim>
+              $ ./stringutils
+              Usage: ./stringutils &lt;operation&gt; &lt;string&gt; [shift]
+              Operations: reverse, palindrome, vowels, uppercase, caesar
             </code></pre>
-            <pre><code class="language-bash" data-line-numbers>
-$ ./stringutils uppercase HelLo
-HELLO
-
+            <pre><code class="language-bash" data-line-numbers data-trim>
+              $ ./stringutils uppercase hello
+              HELLO
             </code></pre>
           </section>
-          <!-- Add Test Suite Here -->
+          <section data-background-color="#525252">
+            <pre><code data-trim data-line-numbers="1-22|12-14|16-18|20-22" class="language-python" style="max-height:none">
+              import subprocess
+
+              def run_program(args):
+                  result = subprocess.run(
+                      ["./stringutils"] + args,
+                      capture_output=True,
+                      text=True,
+                      check=True
+                  )
+                  return result.stdout.strip()
+
+              def test_reverse():
+                  output = run_program(["reverse", "hello"])
+                  assert output == "olleh"
+
+              def test_palindrome_yes():
+                  output = run_program(["palindrome", "level"])
+                  assert output == "Yes"
+
+              def test_palindrome_no():
+                  output = run_program(["palindrome", "world"])
+                  assert output == "No"
+            </code></pre>
+          </section>
+          <section data-background-color="#525252">
+            <pre><code data-trim>
+              ===================== test session starts ======================
+
+              test_stringutils.py::test_reverse PASSED                  [ 33%]
+              test_stringutils.py::test_palindrome_yes PASSED           [ 66%]
+              test_stringutils.py::test_palindrome_no PASSED            [100%]
+
+              ====================== 3 passed in 0.01s =======================
+            </code></pre>
+          </section>
+          <section data-auto-animate data-background-color="#525252">
+            <pre><code data-trim data-line-numbers class="language-python" style="max-height:none">
+              def test_reverse():
+                  output = run_program(["reverse", "hello"])
+                  assert output == "olleh"
+
+              def test_palindrome_yes():
+                  output = run_program(["palindrome", "level"])
+                  assert output == "Yes"
+
+              def test_palindrome_no():
+                  output = run_program(["palindrome", "world"])
+                  assert output == "No"
+            </code></pre>
+            <pre class="fragment"><code class="language-bash" data-line-numbers="3" data-trim>
+              $ ./stringutils
+              Usage: ./stringutils &lt;operation&gt; &lt;string&gt; [shift]
+              Operations: reverse, palindrome, vowels, uppercase, caesar
+            </code></pre>
+          </section>
+          <section data-auto-animate data-background-color="#525252">
+            <pre><code data-trim data-line-numbers class="language-python" style="max-height:none">
+              def test_reverse():
+                  output = run_program(["reverse", "hello"])
+                  assert output == "olleh"
+
+              def test_palindrome_yes():
+                  output = run_program(["palindrome", "level"])
+                  assert output == "Yes"
+
+              def test_palindrome_no():
+                  output = run_program(["palindrome", "world"])
+                  assert output == "No"
+            </code></pre>
+            <div>
+              Missing/Untested:
+              <pre><code class="language-bash" data-trim style="text-align:center">
+                vowels, uppercase, caesar
+              </code></pre>
+            </div>
+          </section>
         </section>
 
+        <!-- More Slides Here -->
       </div>
     </div>
 
