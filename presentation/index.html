@@ -12,6 +12,25 @@
 
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <!-- Custom classes; move to theme spec eventually -->
+    <style>
+      .separator {
+        content: "•";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .75em;
+      }
+      .separator::before, .separator::after {
+        content: "";
+        height: 2px;
+        width: 6em;
+        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
+        border-radius: 2px;
+      }
+      .separator::after { transform: scaleX(-1) }
+    </style>
   </head>
   <body>
     <div class="reveal">
@@ -243,7 +262,7 @@
           </section>
           <section data-auto-animate>
             <p>Why use <strong>Intel PIN</strong> instead of a free alternative?</p>
-            <span style="color:#6f6f6f">&ndash; • &ndash;</span>
+            <span class="separator">•</span>
             <p>Performance and features.</p>
             <p>We evaluated <strong>valgrind</strong>, <strong>frida</strong> &amp; <strong>dynamorio</strong>.</p>
             <p><small><a href="https://github.com/ilmanzo/BinaryCoverage/issues/59">github.com/ilmanzo/BinaryCoverage/issues/59</a></small></p>
@@ -253,7 +272,7 @@
           </section>
           <section data-auto-animate>
             <p>What are the performance implications?</p>
-            <span style="color:#6f6f6f">&ndash; • &ndash;</span>
+            <span class="separator">•</span>
             <p>Designed to be lightweight</p>
             <p>~5% overhead 🪶</p>
           </section>
@@ -262,7 +281,7 @@
           </section>
           <section data-auto-animate>
             <p>What if a function contains logic branching?</p>
-            <span style="color:#6f6f6f">&ndash; • &ndash;</span>
+            <span class="separator">•</span>
             <p>Overview of function calls, not branches.</p>
             <p><small>Other tools already cover all code execution tracing.</small></p>
           </section>
@@ -271,7 +290,7 @@
           </section>
           <section data-auto-animate>
             <p>Can we also trace the function parameters?</p>
-            <span style="color:#6f6f6f">&ndash; • &ndash;</span>
+            <span class="separator">•</span>
             <p>PIN does support it.</p>
             <p><small>Good candidate for future releases 🤞</small></p>
           </section>
@@ -280,7 +299,7 @@
           </section>
           <section data-auto-animate>
             <p>Are other architectures supported?</p>
-            <span style="color:#6f6f6f">&ndash; • &ndash;</span>
+            <span class="separator">•</span>
             <p>No, just <strong>IA-32</strong> (x86) and <strong>intel64</strong> (x86-64).</p>
             <p><small>PIN for ARM no longer available ☹️</small></p>
           </section>
@@ -290,7 +309,7 @@
           </section>
           <section data-auto-animate>
             <p>Does it work with other interpreted languages?</p>
-            <span style="color:#6f6f6f">&ndash; • &ndash;</span>
+            <span class="separator">•</span>
             <p>No, only compiled binaries.</p>
             <p><small>Interpreted languages usually provide native tracing/coverage utilities.</small></p>
           </section>
@@ -299,7 +318,7 @@
           </section>
           <section data-auto-animate>
             <p>Can you add AI, please?</p>
-            <span style="color:#6f6f6f">&ndash; 💩 &ndash;</span>
+            <span class="separator">💩</span>
             <p>No.</p>
           </section>
           <section data-background-color="#0c322c">
