@@ -129,29 +129,30 @@
 
         <!-- Example test suite -->
         <section>
-          <section data-background-color="#525252">
+          <section data-background-color="#1d1d1d">
             <h2>Example Test Suite</h2>
             <p>Testing an example binary program</p>
           </section>
-          <section data-auto-animate data-background-color="#525252">
+          <section data-background-color="#1d1d1d">
             <pre><code class="language-bash" data-line-numbers data-trim>
               $ ./stringutils
               Usage: ./stringutils &lt;operation&gt; &lt;string&gt; [shift]
               Operations: reverse, palindrome, vowels, uppercase, caesar
             </code></pre>
-          </section>
-          <section data-auto-animate data-background-color="#525252">
-            <pre><code class="language-bash" data-line-numbers data-trim>
-              $ ./stringutils
-              Usage: ./stringutils &lt;operation&gt; &lt;string&gt; [shift]
-              Operations: reverse, palindrome, vowels, uppercase, caesar
-            </code></pre>
-            <pre><code class="language-bash" data-line-numbers data-trim>
-              $ ./stringutils uppercase hello
+            <pre class="fragment"><code class="language-bash" data-line-numbers data-trim>
+              $ ./stringutils uppercase "hello"
               HELLO
             </code></pre>
+            <pre class="fragment"><code class="language-bash" data-line-numbers data-trim>
+              $ ./stringutils reverse "my string"
+              gnirts ym
+            </code></pre>
+            <pre class="fragment"><code class="language-bash" data-line-numbers data-trim>
+              $ ./stringutils caesar "secret message" 2
+              ugetgv oguucig
+            </code></pre>
           </section>
-          <section data-background-color="#525252">
+          <section data-background-color="#1d1d1d">
             <pre><code data-trim data-line-numbers="1-22|12-14|16-18|20-22" class="language-python" style="max-height:none">
               import subprocess
 
@@ -177,7 +178,7 @@
                   assert output == "No"
             </code></pre>
           </section>
-          <section data-background-color="#525252">
+          <section data-background-color="#1d1d1d">
             <pre><code data-trim>
               ===================== test session starts ======================
 
@@ -188,7 +189,7 @@
               ====================== 3 passed in 0.01s =======================
             </code></pre>
           </section>
-          <section data-auto-animate data-background-color="#525252">
+          <section data-auto-animate data-background-color="#1d1d1d">
             <pre><code data-trim data-line-numbers class="language-python" style="max-height:none">
               def test_reverse():
                   output = run_program(["reverse", "hello"])
@@ -202,28 +203,28 @@
                   output = run_program(["palindrome", "world"])
                   assert output == "No"
             </code></pre>
-            <pre class="fragment"><code class="language-bash" data-line-numbers="3" data-trim>
+          </section>
+          <section data-auto-animate data-background-color="#1d1d1d">
+            <pre><code data-trim data-line-numbers class="language-python" style="max-height:none">
+              def test_reverse():
+                  output = run_program(["reverse", "hello"])
+                  assert output == "olleh"
+
+              def test_palindrome_yes():
+                  output = run_program(["palindrome", "level"])
+                  assert output == "Yes"
+
+              def test_palindrome_no():
+                  output = run_program(["palindrome", "world"])
+                  assert output == "No"
+            </code></pre>
+            <pre><code class="language-bash" data-line-numbers="3" data-trim>
               $ ./stringutils
               Usage: ./stringutils &lt;operation&gt; &lt;string&gt; [shift]
               Operations: reverse, palindrome, vowels, uppercase, caesar
             </code></pre>
-          </section>
-          <section data-auto-animate data-background-color="#525252">
-            <pre><code data-trim data-line-numbers class="language-python" style="max-height:none">
-              def test_reverse():
-                  output = run_program(["reverse", "hello"])
-                  assert output == "olleh"
-
-              def test_palindrome_yes():
-                  output = run_program(["palindrome", "level"])
-                  assert output == "Yes"
-
-              def test_palindrome_no():
-                  output = run_program(["palindrome", "world"])
-                  assert output == "No"
-            </code></pre>
             <div>
-              Missing/Untested:
+              <p>Missing/Untested:</p>
               <pre><code class="language-bash" data-trim style="text-align:center">
                 vowels, uppercase, caesar
               </code></pre>
