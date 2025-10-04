@@ -253,10 +253,22 @@
             <h3>How it Works</h3>
             <span class="separator">•</span>
             <ul>
+              <li class="fragment">Build FuncTracer.so</li>
               <li class="fragment">Inject the running binary</li>
               <li class="fragment">Collect runtime data</li>
-              <li class="fragment">Generate results</li>
+              <li class="fragment">Save function logs</li>
+              <li class="fragment">Generate (pretty) results</li>
             </ul>
+          </section>
+          <section>
+            <h3>Used Tools</h3>
+            <span class="separator">•</span>
+            <ul>
+              <li class="fragment"><strong>PIN</strong> for injecting the binary with FuncTracer</li>
+              <li class="fragment"><strong>FuncTracer</strong> for gathering runtime data</li>
+              <li class="fragment"><strong>CMD</strong> (go binary) for generating results *</li>
+            </ul>
+            <p class="fragment"><small>* CMD can also wrap any binary</small></p>
           </section>
         </section>
 
